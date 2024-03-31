@@ -1,0 +1,22 @@
+# Build Output
+build/
+
+# Node.js Dependencies
+node_modules/
+
+# IDE Configurations
+.vscode/
+.idea/
+
+# Environment Files
+.env
+.env.local
+.env.*.local
+
+# TypeScript Cache
+*.tsbuildinfo
+
+# Linting & Prettier Files
+.eslintignore
+.eslintrc.js
+.prettierrc.js
