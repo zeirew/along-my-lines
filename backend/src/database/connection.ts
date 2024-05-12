@@ -1,19 +1,5 @@
-import {PostgreSqlDriver} from '@mikro-orm/postgresql';
-import {Line} from '../entities/line';
-import {MikroORM} from '@mikro-orm/core';
-import * as dotenv from 'dotenv';
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 
-dotenv.config();
+const dynamoDBClient = new DynamoDBClient({ region: 'us-east-1'});
 
-export async function getORM() {
-  const orm = await MikroORM.init({
-    entities: [Line],
-    dbName: 'postgres',
-    host: 'localhost',
-    port: 5433,
-    user: 'postgres',
-    password: process.env.DB_PASSWORD,
-    driver: PostgreSqlDriver,
-  });
-  return orm;
-}
+module.exports = dynamoDBClient;

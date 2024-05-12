@@ -1,9 +1,10 @@
 import express from 'express';
-const linesRoute = require('./routes/lines');
+
+const stationsRoute = require('./routes/stations');
 
 const app = express();
 
-app.get('/lines', linesRoute);
+app.get('/stations', stationsRoute);
 
 app.listen(3000, () => {
   console.log('Server is listening on port 3000');
